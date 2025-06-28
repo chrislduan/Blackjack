@@ -1,7 +1,7 @@
 # Calculating Variance
 import numpy as np
 
-
+# Data assuming that Aces are 1s
 data = np.array([1,1,1,1,
                    2,2,2,2,
                    3,3,3,3,
