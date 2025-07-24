@@ -29,7 +29,7 @@ def monty_game(chances):
         
         # .choice() method from the random module
         # random choice code below
-        # second_choice = random.choice(monty_choice)
+        second_choice = random.choice(monty_choice)
 
         '''
         # switch strategy
