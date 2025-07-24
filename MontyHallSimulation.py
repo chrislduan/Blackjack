@@ -25,7 +25,8 @@ def monty_game(chances):
         
         # monty reveals a goat from a door that hasn't
         # been opened by the contestant
-        monty_choice = [x for x in range(3) if x != first_choice and doors[x]==0]
+        # monty_choice = [x for x in range(3) if x != first_choice and doors[x]==0]
+        monty_choice = x for x in range(3) if x != first_choice and doors[x]==0
         
         # .choice() method from the random module
         # random choice code below
@@ -43,19 +44,19 @@ def monty_game(chances):
         '''
 
         # user input for second choice, expected input is True or False
-        #switch_strategy = input()
+        switch_strategy = input()
 
         # variable to create final choice, assuming that the user did not switch strategy
-        #final_choice = first_choice
+        final_choice = first_choice
         # if user did choose to switch strategy, then choose the door that is not their original choice nor the one chosen by monty
-        #if switch_strategy:
-            #final_choice = [x for x in range(3) if x != first_choice and x != monty_choice]
+        if switch_strategy:
+            final_choice = [x for x in range(3) if x != first_choice and x != monty_choice]
 
         # score count
-        #if doors[final_choice] == 1:
-            #carcount += 1
-        #else:
-            #goatcount += 1
+        if doors[final_choice] == 1:
+            carcount += 1
+        else:
+            goatcount += 1
 
     wining_percentage = (carcount/chances)*100
     return wining_percentage
