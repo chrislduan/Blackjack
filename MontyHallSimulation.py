@@ -27,6 +27,8 @@ def monty_game(chances):
         # monty reveals a goat from a door that hasn't
         # been opened by the contestant
         monty_choice = [x for x in range(3) if x != first_choice and doors[x]==0]
+        # print a line to inform user which door was revealed to have a goat
+        print(f"Door {monty_choice + 1} has a goat")
         
         # .choice() method from the random module
         # random choice code below
