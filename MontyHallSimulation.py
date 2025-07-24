@@ -21,6 +21,7 @@ def monty_game(chances):
         # random choice below
         # first_choice = random.randint(0,2)
         # choice based on user input
+        print(f"Choose door 1, 2, or 3")
         first_choice = input() - 1
         
         # monty reveals a goat from a door that hasn't
@@ -43,6 +44,7 @@ def monty_game(chances):
         '''
 
         # user input for second choice, expected input is True or False
+        print(f"Do you want to switch your choice, True or False?")
         switch_strategy = input()
 
         # variable to create final choice, assuming that the user did not switch strategy
@@ -65,7 +67,7 @@ chances = 2
 
 # calls the function monty_game
 # switch_win_percentage = monty_game(chances, switch_strategy=True)
-switch_win_percentage = monty_game(chances, switch_strategy=True)
+switch_win_percentage = monty_game(chances)
 
 # f string
 print(f" I won {carcount} times ")
