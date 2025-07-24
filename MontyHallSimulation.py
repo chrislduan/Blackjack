@@ -26,7 +26,13 @@ def monty_game(chances):
         # monty reveals a goat from a door that hasn't
         # been opened by the contestant
         # monty_choice = [x for x in range(3) if x != first_choice and doors[x]==0]
-        monty_choice = x for x in range(3) if x != first_choice and doors[x]==0
+
+        # list of doors monty can open
+        monty_doors = [x for x in range(len(doors)) if x != first_choice and doors[x]==0]
+        monty_choice = monty_doors[random.randint(0, len(monty_doors)] + 1
+
+        # print the door monty reveals
+        print(f"Monty reveals door {monty_choice} has a goat.")
         
         # .choice() method from the random module
         # random choice code below
