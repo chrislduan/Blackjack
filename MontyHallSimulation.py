@@ -20,6 +20,8 @@ def monty_game(chances):
         # contestant makes a choice
         # random choice below
         # first_choice = random.randint(0,2)
+        # prompt for user input
+        print(f"Choose doors 1-{len(doors)}.")
         # choice based on user input
         first_choice = int(input()) - 1
         
@@ -29,14 +31,14 @@ def monty_game(chances):
 
         # list of doors monty can open
         monty_doors = [x for x in range(len(doors)) if x != first_choice and doors[x]==0]
-        monty_choice = monty_doors[random.randint(0, len(monty_doors)] + 1
+        monty_choice = monty_doors[random.randint(0, len(monty_doors))] + 1
 
         # print the door monty reveals
         print(f"Monty reveals door {monty_choice} has a goat.")
         
         # .choice() method from the random module
         # random choice code below
-        second_choice = random.choice(monty_choice)
+        # second_choice = random.choice(monty_choice)
 
         '''
         # switch strategy
@@ -49,6 +51,8 @@ def monty_game(chances):
                 goatcount += 1
         '''
 
+        # prompt if user wants to change their choice
+        print(f"Would you like to change your choice, True or False?")
         # user input for second choice, expected input is True or False
         switch_strategy = input()
 
