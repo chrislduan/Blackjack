@@ -1,3 +1,5 @@
+# in-built module that generates
+# random numbers
 import random
 
 # def monty_game(chances, switch_strategy=True):
@@ -28,7 +30,34 @@ def monty_game(chances):
         # .choice() method from the random module
         # random choice code below
         # second_choice = random.choice(monty_choice)
-            wining_percentage = (carcount/chances)*100
+
+        '''
+        # switch strategy
+        if switch_strategy:
+            third_choice = next(x for x in range(3) if x != first_choice and x != second_choice)
+        
+            if doors[third_choice] == 1:
+                carcount += 1
+            else:
+                goatcount += 1
+        '''
+
+        # user input for second choice, expected input is True or False
+        #switch_strategy = input()
+
+        # variable to create final choice, assuming that the user did not switch strategy
+        #final_choice = first_choice
+        # if user did choose to switch strategy, then choose the door that is not their original choice nor the one chosen by monty
+        #if switch_strategy:
+            #final_choice = [x for x in range(3) if x != first_choice and x != monty_choice]
+
+        # score count
+        #if doors[final_choice] == 1:
+            #carcount += 1
+        #else:
+            #goatcount += 1
+
+    wining_percentage = (carcount/chances)*100
     return wining_percentage
 
 # sets the number of iterations to 1000
