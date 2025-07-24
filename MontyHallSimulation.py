@@ -39,7 +39,7 @@ def monty_game(chances, switch_strategy=True):
     return wining_percentage
 
 # sets the number of iterations to 1000
-chances = 1000
+chances = 2
 
 # calls the function monty_game
 switch_win_percentage = monty_game(chances, switch_strategy=True)
